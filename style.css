@@ -1,4 +1,7 @@
-    /* Nav */
+body {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+/* Nav */
     .navbar {
         border-bottom: 1px solid #ddd;
     }
@@ -365,4 +368,5 @@
             border-radius: 6px;
             margin-right: -25px !important;
         }
+
     }
