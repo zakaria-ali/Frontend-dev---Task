@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اختباري دوت كوم</title>
+    <link rel="icon" type="image/png" href="static/logo.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-3">
+        <div class="container-fluid">
+            <div class="smallScreen-container d-flex flex-wrap align-items-center justify-content-between">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="./static/logo.png" alt="الشعار" width="221" height="65" class="ms-2">
+                </a>
+
+                <!-- Search -->
+                <form class="search-bar me-auto my-lg-0 position-relative">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="search" class="form-control ps-5" placeholder="ابحث عن اي شيئ من هنا..."
+                        aria-label="بحث">
+                </form>
+
+            </div>
+
+
+            <!-- Icons -->
+            <ul class="navbar-nav mx-auto align-items-center">
+
+                <!-- Settings icon -->
+                <li class="nav-item dropdown ms-3">
+                    <a class="nav-link position-relative" href="#" id="settingsDropdown" role="button"
+                        data-bs-toggle="dropdown">
+                        <i class="fas fa-cog fs-5"></i>
+                        <span class="fw-bold">الاعدادات</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">اللغة</a></li>
+                        <li><a class="dropdown-item" href="#">الوضع الليلي</a></li>
+                    </ul>
+                </li>
+
+                <!-- Notifications icon -->
+                <li class="nav-item dropdown ms-3">
+                    <a class="nav-link position-relative" href="#" id="notifDropdown" role="button"
+                        data-bs-toggle="dropdown">
+                        <i class="fas fa-bell fs-5"></i>
+                        <span class="fw-bold">الاشعارات</span>
+                        <span class="badge rounded-pill notif-count">9</span>
+
+
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">لديك إشعارات جديدة</a></li>
+                    </ul>
+                </li>
+
+                <!-- User account -->
+                <li class="nav-item dropdown ms-3">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown"
+                        role="button" data-bs-toggle="dropdown">
+                        <i class="fas fa-user-circle fs-1"></i>
+                        <div class="text-start ms-2">
+                            <div class="fw-bold username">ضيف</div>
+                            <small class="text-muted">guste@example.com</small>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">الملف الشخصي</a></li>
+                        <li><a class="dropdown-item" href="#">تسجيل الخروج</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Exam Title Section -->
+    <section
+        class="exam-header py-3 px-4 d-flex flex-column flex-md-row align-items-center justify-content-evenly shadow-sm mb-4">
+        <h1 class="exam-title fw-bold mb-3 mb-md-0" style="font-size: 1.6rem;">اختبار نصفي اول متوسط. لغة عربية. الفصل
+            الثاني</h1>
+        <div class="exam-buttons d-flex gap-3">
+            <button type="button" class="btn btn-sm d-flex align-items-center custom-btn1">
+                <i class="fa-solid fa-up-right-from-square me-2 fas"></i>مشاركة
+            </button>
+            <button type="button" class="btn btn-sm d-flex align-items-center custom-btn1">
+                <i class="fas fa-download me-2"></i> تحميل
+            </button>
+            <button type="button" class="btn btn-sm d-flex align-items-center custom-btn2">
+                نموذج الاجابة
+            </button>
+        </div>
+    </section>
+
+    <!-- Success Message Section -->
+    <section class="container success-section mt-5 ">
+        <div class=" p-4 rounded mb-4 justify-content-between d-flex">
+            <div class="success-text d-flex align-items-center gap-1">
+                <img src="./static/money bag.png" alt="money bag" class="ms-2">
+                <h4 class="mb-0 fw-bold">تم انشاء الاختبار بنجاح!</h4>
+            </div>
+            <div class="success-btn d-flex align-items-center gap-4">
+                <button type="button" class="btn btn-sm d-flex align-items-center custom-btn3">
+                    <img src="./static/money coins.png" alt="money coins">
+                    <span class="label">التكلفة</span>
+                    <span class="points">15 نقطة</span>
+                </button>
+                <button type="button" class="btn btn-sm d-flex align-items-center custom-btn3">
+                    <img src="./static/money coins.png" alt="money coins">
+                    <span class="label">نقاطي</span>
+                    <span class="points">17</span>
+                </button>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between points-charging py-3 px-4 align-items-center rounded ">
+            <div class="d-flex align-items-center gap-2"><i class="fas fa-exclamation-circle"></i>
+                <p class="mb-0 fs-6">سيتم خصم 5 نقاط عند حفظ التعديلات لتوليد النسخة الجديدة</p>
+            </div>
+            <a href="#">شحن النقاط</a>
+        </div>
+    </section>
+
+    <!-- Paper Size Section -->
+    <section class="container pt-4 mt-5 paper-size-section rounded d-flex justify-content-between custom-header">
+        <div class="d-flex gap-2 align-items-center">
+            <h5 class="mb-4 fw-bold">مقاسات ورقة الاختبار</h5>
+            <p id="displayText" class="fs-6"></p>
+        </div>
+        <div class="d-flex gap-3 mb-3">
+            <button id="smallSizeBtn" type="button" class="btn  d-flex align-items-center gap-2 paper-size-btn">
+                مقاس صغير
+                <i class="fas fa-check d-none"></i>
+
+            </button>
+            <button id="largeSizeBtn" type="button" class="btn  d-flex align-items-center gap-2 paper-size-btn">
+                مقاس كبير
+                <i class="fas fa-check d-none"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Q1 Section -->
+    <section class="container q1 p-0 mt-5 bg-white">
+        <div class="custom-header d-flex justify-content-between p-4 rounded">
+            <div class="qu-text d-flex align-items-center gap-2">
+                <i class="fa-solid fa-list-ul"></i>
+                <h5 class="qu-title"> السؤال الاول: اختر الاجابة الصحيحة</h5>
+            </div>
+
+            <button type="button" class="btn d-flex align-items-center gap-2 modify">
+                <i class="fa-solid fa-pen"></i>
+                تعديل
+            </button>
+        </div>
+        <div class="mx-5">
+            <table class="mt-5">
+                <!-- Q1-1 -->
+                <tr>
+                    <td rowspan="2">1</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+                <!-- Q1-2 -->
+                <tr>
+                    <td rowspan="2">2</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+                <!-- Q1-3 -->
+                <tr>
+                    <td rowspan="2">3</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+                <!-- Q1-4 -->
+                <tr>
+                    <td rowspan="2">4</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+                <!-- Q1-5 -->
+                <tr>
+                    <td rowspan="2">5</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+                <!-- Q1-6 -->
+                <tr>
+                    <td rowspan="2">6</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+                <!-- Q1-7 -->
+                <tr>
+                    <td rowspan="2">7</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+                <!-- Q1-8 -->
+                <tr>
+                    <td rowspan="2">8</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+                <!-- Q1-9 -->
+                <tr>
+                    <td rowspan="2">9</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+                <!-- Q1-10 -->
+                <tr>
+                    <td rowspan="2">10</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- Q2 Section -->
+    <section class="container q2 p-0 mt-5 bg-white">
+        <div class="custom-header d-flex justify-content-between p-4 rounded">
+            <div class="qu-text d-flex align-items-center gap-2">
+                <i class="fa-solid fa-list-ul"></i>
+                <h5 class="qu-title"> السؤال الثاني: القطعة</h5>
+            </div>
+
+            <button type="button" class="btn d-flex align-items-center gap-2 modify">
+                <i class="fa-solid fa-pen"></i>
+                تعديل
+            </button>
+        </div>
+        <h5 class="qu-header mt-5 mx-5">السؤال الاول: اقرأ القطعة وأجب عمايأتي:</h5>
+        <p class="mx-5">
+            كنت منذ صغري، أحب البيئة ومخلوقاتها، وأعجب برؤية أغصان الشجر في البساتين، والأعشاب في الحقول، ومع تقدمي في
+            العمر، استمر حبي للطبيعة، ولكن حتى الكائنات أصابها بعض التبدل والتغير، إذ مارست صيد العصافير، غير مدرك
+            الفارق العظيم بين حب البيئة، وقتل هذه الطيور الملونة. في يوم كنت أمارس فيه هواية الصيد لمحت ببساطة جميلة
+            الألوان، وهي على غصن في شجرة سنديـان تنقي، غافلة عما يحيط بها من خطر. لقد قمت صوبتها بطلقة واحدة من بندقيتي،
+            سقطت بعدها على العشب الذي يغمره الدفء؛ فاقتربت منها لأشاهدها، وهي تلفظ أنفاسها، نمت على ما فعلت فبكيت واقفا
+            كأنني جذع شجرة. وقد تكون عيناهـا الدامعتان هما اللتان جعلتاني ثابتا في مكاني انظر إليها وهي في آخر لحظاتها.
+            رجعت وأنا أبكي، وأقول لنفسي: لماذا فعلت هذا؟! منذ ذلك الحين، أقلعت عن الصيد وعدت إلى عاداتي القديمة في حب
+            البيئة والاستمتاع بجمالها.</p>
+        <div class="mx-5">
+            <table class="mt-3">
+                <!-- Q2-1 -->
+                <tr>
+                    <td rowspan="2">1</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+                <!-- Q2-2 -->
+                <tr>
+                    <td rowspan="2">2</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+                <!-- Q2-3 -->
+                <tr>
+                    <td rowspan="2">3</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+                <!-- Q2-4 -->
+                <tr>
+                    <td rowspan="2">4</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+                <!-- Q2-5 -->
+                <tr>
+                    <td rowspan="2">5</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+                <!-- Q2-6 -->
+                <tr>
+                    <td rowspan="2">6</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+                <!-- Q2-7 -->
+                <tr>
+                    <td rowspan="2">7</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+                <!-- Q2-8 -->
+                <tr>
+                    <td rowspan="2">8</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+                <!-- Q2-9 -->
+                <tr>
+                    <td rowspan="2">9</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+                <!-- Q2-10 -->
+                <tr>
+                    <td rowspan="2">10</td>
+                    <td colspan="8" class="question-cell">
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="religion" value="hanif" checked></td>
+                    <td>الحنفية</td>
+                    <td><input type="radio" name="religion" value="judaism"></td>
+                    <td>اليهودية</td>
+                    <td><input type="radio" name="religion" value="christianity"></td>
+                    <td>النصرانية</td>
+                    <td><input type="radio" name="religion" value="zoroastrianism"></td>
+                    <td>المجوسية</td>
+                </tr>
+            </table>
+        </div>
+        <div class="px-5 q2-table">
+            <table class="mt-3">
+                <tr>
+                    <td>1</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- Q3 Section -->
+    <section class="container q3 p-0 mt-5 bg-white">
+        <div class="custom-header d-flex justify-content-between p-4 rounded">
+            <div class="qu-text d-flex align-items-center gap-2">
+                <i class="fa-solid fa-list-ul"></i>
+                <h5 class="qu-title"> السؤال الثالث: سؤال مزاوجة</h5>
+            </div>
+
+            <button type="button" class="btn d-flex align-items-center gap-2 modify">
+                <i class="fa-solid fa-pen"></i>
+                تعديل
+            </button>
+        </div>
+        <div class="mx-5">
+            <table class="mt-3 q3-table">
+                <tr>
+                    <td colspan="5">السؤال الثاني: صل بين العبارات في المجموعة (أ) بما يناسبها من المجموعة (ب)</td>
+                </tr>
+                <tr>
+                    <td><strong>أ</strong></td>
+                    <td><strong>المجموعة (ب)</strong></td>
+                    <td rowspan="7"></td>
+                    <td><strong>ب</strong></td>
+                    <td>
+                        <strong>المجموعة (ب)</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>1</strong></td>
+                    <td>الحنفية</td>
+                    <td></td>
+                    <td>
+                        الحنفية
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>2</strong></td>
+                    <td>الحنفية</td>
+                    <td></td>
+                    <td>
+                        الحنفية
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>3</strong></td>
+                    <td>الحنفية</td>
+                    <td></td>
+                    <td>
+                        الحنفية
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>4</strong></td>
+                    <td>الحنفية</td>
+                    <td></td>
+                    <td>
+                        الحنفية
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>5</strong></td>
+                    <td>الحنفية</td>
+                    <td></td>
+                    <td>
+                        الحنفية
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>6</strong></td>
+                    <td>الحنفية</td>
+                    <td></td>
+                    <td>
+                        الحنفية
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- Q4 Section -->
+    <section class="container q4 p-0 mt-5 bg-white">
+        <div class="custom-header d-flex justify-content-between p-4 rounded">
+            <div class="qu-text d-flex align-items-center gap-2">
+                <i class="fa-solid fa-list-ul"></i>
+                <h5 class="qu-title"> السؤال الرابع: ارسم بخط النسخ</h5>
+            </div>
+
+            <button type="button" class="btn d-flex align-items-center gap-2 modify">
+                <i class="fa-solid fa-pen"></i>
+                تعديل
+            </button>
+        </div>
+        <h5 class="qu-header mt-5 mx-5 bg-light">السؤال الرابع: ارسمها بخط النسخ</h5>
+        <div class="copy-qu mx-5 p-4 bg-light">
+            <h3>"يذهب التلميذ الى المدرسة مبكرا كل صباح."</h3>
+            <hr class="mt-5">
+            <hr class="mt-4">
+            <hr class="mt-4">
+        </div>
+    </section>
+
+    <!-- Q5 Section -->
+    <section class="container q5 p-0 mt-5 bg-white">
+        <div class="custom-header d-flex justify-content-between p-4 rounded">
+            <div class="qu-text d-flex align-items-center gap-2">
+                <i class="fa-solid fa-list-ul"></i>
+                <h5 class="qu-title"> السؤال الخامس: صح أو خطأ</h5>
+            </div>
+
+            <button type="button" class="btn d-flex align-items-center gap-2 modify">
+                <i class="fa-solid fa-pen"></i>
+                تعديل
+            </button>
+        </div>
+        <div class="px-5 q2-table">
+            <table class="mt-3">
+                <tr>
+                    <td>1</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- Q6 Section -->
+    <section class="container q6 p-0 mt-5 bg-white">
+        <div class="custom-header d-flex justify-content-between p-4 rounded">
+            <div class="qu-text d-flex align-items-center gap-2">
+                <i class="fa-solid fa-list-ul"></i>
+                <h5 class="qu-title"> السؤال السادس: صح أو خطأ</h5>
+            </div>
+
+            <button type="button" class="btn d-flex align-items-center gap-2 modify">
+                <i class="fa-solid fa-pen"></i>
+                تعديل
+            </button>
+        </div>
+        <div class="px-5 q2-table">
+            <table class="mt-3">
+                <tr>
+                    <td>1</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td>( <i class="fa-solid fa-check"></i> )</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td>( <i class="fa-solid fa-xmark"></i> )</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td>( <i class="fa-solid fa-check"></i> )</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td>( <i class="fa-solid fa-xmark"></i> )</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td>( <i class="fa-solid fa-check"></i> )</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td>( <i class="fa-solid fa-xmark"></i> )</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td>( <i class="fa-solid fa-check"></i> )</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td>( <i class="fa-solid fa-xmark"></i> )</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td>( <i class="fa-solid fa-check"></i> )</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>
+                        هي دين إبراهيم عليه السلام وكان عليها النبي صلى الله عليه وسلم قبل البعثة:
+                    </td>
+                    <td>( <i class="fa-solid fa-xmark"></i> )</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- Q7 Section -->
+    <section class="container q7 p-0 mt-5 bg-white">
+        <div class="custom-header d-flex justify-content-between p-4 rounded">
+            <div class="qu-text d-flex align-items-center gap-2">
+                <i class="fa-solid fa-list-ul"></i>
+                <h5 class="qu-title"> السؤال السابع: املاء</h5>
+            </div>
+
+            <button type="button" class="btn d-flex align-items-center gap-2 modify">
+                <i class="fa-solid fa-pen"></i>
+                تعديل
+            </button>
+        </div>
+        <h5 class="qu-header mt-5 mx-5 bg-light">السؤال السابع: اكتب ما يملى عليك</h5>
+        <div class="copy-qu mx-5 p-4 bg-light">
+            <hr class="mt-5">
+            <hr class="mt-4">
+            <hr class="mt-4">
+            <hr class="mt-4">
+            <hr class="mt-4">
+            <hr class="mt-4">
+        </div>
+    </section>
+
+    <!-- Q8 Section -->
+    <section class="container q8 p-0 my-5 bg-white">
+        <div class="custom-header d-flex justify-content-between p-4 rounded">
+            <div class="qu-text d-flex align-items-center gap-2">
+                <i class="fa-solid fa-list-ul"></i>
+                <h5 class="qu-title"> السؤال الثامن: اختر الاجابة الصحيحة</h5>
+            </div>
+
+            <button type="button" class="btn d-flex align-items-center gap-2 modify">
+                <i class="fa-solid fa-pen"></i>
+                تعديل
+            </button>
+        </div>
+
+        <div class="mx-5">
+            <table class="mt-3">
+                <tr>
+                    <td rowspan="2">14</td>
+                    <td colspan="8" class="question-cell">
+                        اختر خريطة سوريا الصحيحة:
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>أ</strong></td>
+                    <td>
+                        <img src="./static/iran.PNG" alt="iran image">
+                        <i class="fa-solid fa-pen"></i>
+                    </td>
+                    <td><strong>ب</strong></td>
+                    <td><img src="./static/jordan.jpg" alt="jordan image">
+                        <i class="fa-solid fa-pen"></i>
+                    </td>
+                    <td><strong>ج</strong></td>
+                    <td><img src="./static/syria.jpeg" alt="syria image">
+                        <i class="fa-solid fa-pen"></i></td>
+                    <td><strong>د</strong></td>
+                    <td><img src="./static/saudi.png" alt="saudi image">
+                        <i class="fa-solid fa-pen"></i></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
